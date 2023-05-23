@@ -1,0 +1,44 @@
+    <div class="container-fluid mt-5  ">
+        <div class="row mt-5 ">
+            <div class="col-lg-2  col-md-2 col-sm-6  text-center ">
+                <a (click)="filter('')" > 
+                    <img src="https://i.postimg.cc/Hxp7TLQV/download.jpg" width="50%" alt="" height="100px" >  <h3>All</h3>
+                </a></div>
+            <div class="col-lg-2 col-md-2 col-sm-6  text-center"><a (click)="filter(1)" ><img src="https://i.postimg.cc/HkhZNV74/images.jpg"  width="50%" alt="" height="100px"> <h3> Top Wears</h3></a></div>
+            <div class="col-lg-2 col-md-2 col-sm-6  text-center"><a (click)="filter(2)" ><img src="https://i.postimg.cc/bw70bbtM/download-1.jpg"  width="50%" alt="" height="100px">  <h3>bottom Wears</h3></a></div>
+            <div class="col-lg-2 col-md-2 col-sm-6  text-center"><a (click)="filter(3)" ><img src="https://i.postimg.cc/RVjJbmZJ/images-2.jpg " width="50%" height="100px" alt=""> <h3>Men footwear</h3></a></div>
+            <div class="col-lg-2 col-md-2 col-sm-6  text-center"><a (click)="filter(4)" ><img src="https://i.postimg.cc/PqFCYn9q/download-2.jpg"  width="50%" height="100px" alt=""> <h3>Men Accesories</h3></a></div>
+            <div class="col-lg-2 col-md-2 col-sm-6  text-center"><a (click)="filter(5)" ><img src="https://i.postimg.cc/mDHg9z7d/mens-inner-baniyan-manufacturer-500x500.webp"  width="=50%" height="100px" alt="">  <h3>Inners and Sleep Wear</h3></a></div>
+
+        </div>
+    </div>
+    
+    
+    
+    
+    <!-- Section-->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4  justify-content-center">
+                <div class="col mb-5" *ngFor="let i of filterCategory | filter: searchString :'product' ">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="{{i.productImg}}" height="380px" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">{{i.product}}</h5>
+                                <!-- Product price-->
+                      <span class="price">  {{i.price }} </span>Rs
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"  routerLink="view-product/{{i.id}}">View</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

@@ -1,0 +1,59 @@
+
+
+<div class="container w-50 mt-5 p-5 ">
+    <h1>Edit Product</h1>
+     <div class="row">
+    <div class="col-lg-12">
+          <form      (ngSubmit)="updateProduct()">
+              <div class="mb-3">
+                <label for="id1" class="form-label">Id</label>
+                <input [(ngModel)]="pdata.id" type="text" class="form-control" id="id1"  name="nid">
+              </div>
+              <div class="mb-3">
+                <label for="productid" class="form-label">Product</label>
+                <input [(ngModel)]="pdata.product" type="text" class="form-control" id="productid" name="pname">
+              </div>
+              <div class="mb-3">
+                  <label for="categoryid" class="form-label">CategoryId</label>
+                  <input [(ngModel)]="pdata.categoryId" type="text" class="form-control" id="categoryid" name="catname">
+                </div>
+                <div class="mb-3">
+                  <label for="descriptionid" class="form-label">Description</label>
+                  <input [(ngModel)]="pdata.description" type="text" class="form-control" id="descriptionid" name="desname">
+                </div>
+                <div class="mb-3">
+                  <label for="priceid" class="form-label">Price</label>
+                  <input [(ngModel)]="pdata.price" type="text" class="form-control" id="priceid" name="pricename">
+                </div>
+                <div class="mb-3">
+                  <label for="availableid" class="form-label">Available</label>
+                  <input [(ngModel)]="pdata.is_available" type="text" class="form-control" id="availableid" name="avname">
+                </div>
+                <div class="mb-3">
+                    <label for="pdtimg" class="form-label">Product Image Url</label>
+                    <input [(ngModel)]="pdata.productImg" type="text"  class="form-control" id="pdtimg" name="pdtimgname">
+                  </div>
+                  <div class="mb-3">
+                    <label for="ratingid" class="form-label">Rating</label>
+                    <input [(ngModel)]="pdata.rating" type="text" class="form-control" id="ratingid" name="ratingname">
+                  </div>
+                  <div class="mb-3">
+                      <label for="reviewid" class="form-label">Review</label>
+                      <input [(ngModel)]="pdata.review" type="text" class="form-control" id="reviewid" name="reviewid">
+                    </div>
+                    <div class="mb-3">
+                        <label for="vendorid" class="form-label">Vendor Name</label>
+                        <input [(ngModel)]="pdata.vendor_name" type="text" class="form-control" id="vendorid" name="vendorname">
+                      </div>
+                      <div class="mb-3">
+                        <label for="warrentyid" class="form-label">Warrenty</label>
+                        <input [(ngModel)]="pdata.warrenty" type="text" class="form-control" id="warrentyid" name="warrentyname">
+                      </div>
+              <button type="submit"  class="btn btn-primary">Submit</button>
+            </form>
+    </div>
+     </div>
+  </div>
+
+
+

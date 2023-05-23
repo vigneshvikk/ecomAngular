@@ -1,0 +1,30 @@
+.container  .navbar-brand{
+    color: #12504e;
+    font-weight: 700;
+    font-size: 40px;
+}
+.navbar-nav .nav-item a{
+    color: #458381;
+}
+.d-flex button{
+    color: white;
+    background-color: #458381;
+    border: none;
+}
+.d-flex button:hover{
+    background-color: white;
+    color: #12504e;
+}
+ .badge{
+    color:white ;
+    background-color:#0d3c3a;
+}
+.banner{
+    background-color: #73a2a0;
+    
+}
+.banner .container h1{
+
+    color: #a0c55f;
+   
+}
